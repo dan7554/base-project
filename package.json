@@ -2,12 +2,12 @@
   "name": "base-project",
   "version": "1.0.0",
   "description": "A project template with webpack, react, babel, etc.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:dist": "webpack --env=prod --progress --profile --colors"
+    "dev": "webpack --env=dev --progress --profile --colors",
+    "dist": "webpack --env=prod --progress --profile --colors"
   },
   "author": "",
   "license": "ISC",
