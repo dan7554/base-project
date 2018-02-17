@@ -83,19 +83,21 @@ npm start
 For invarient voilation:
 https://stackoverflow.com/questions/26566317/invariant-violation-registercomponent-target-container-is-not-a-dom-elem
 
-By the time script is executed, document element is not available yet, because script itself is in the head. While it's a valid solution to keep script in head and render on DOMContentLoaded event, it's even better to put your script at the very bottom of the body and render root component to a div before it like this:
+    By the time script is executed, document element is not available yet, because script itself is in the head. While it's a valid solution to keep script in head and render on DOMContentLoaded event, it's even better to put your script at the very bottom of the body and render root component to a div before it like this:
 
-<html>
-<head>
-</head>
-<body>
-  <div id="root"></div>
-  <script src="/bundle.js"></script>
-</body>
-</html>
-and in your code, call
+    <html>
+    <head>
+    </head>
+    <body>
+    <div id="root"></div>
+    <script src="/bundle.js"></script>
+    </body>
+    </html>
+    and in your code, call
 
-React.render(<App />, document.getElementById('root'));
-You should always render to a nested div instead of body. Otherwise all sorts of third-party code (Google Font Loader, browser plugins, whatever) can modify the body DOM node when React doesn't expect it, and cause weird errors that are very hard to trace and debug. Read more about this issue.
+    React.render(<App />, document.getElementById('root'));
+    You should always render to a nested div instead of body. Otherwise all sorts of third-party code (Google Font Loader, browser plugins, whatever) can modify the body DOM node when React doesn't expect it, and cause weird errors that are very hard to trace and debug. Read more about this issue.
+
+
 
 Done!
