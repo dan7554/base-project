@@ -1,0 +1,101 @@
+Stolen from:
+
+https://medium.com/@danilosilvadev/webpack-react-redux-babel-config-in-10-minutes-4ad8c4abc8b2
+
+Installations:
+
+node modules
+npm init -y
+webpack
+npm install --save-dev webpack
+npm install --save lodash
+webpack devserver
+npm install webpack-dev-server --save-dev
+react
+npm install --save react react-dom
+react router
+npm install --save react-router
+react router dom
+npm install react-router-dom
+babel
+npm install --save-dev babel-preset-env
+babel for ES2015
+npm install --save-dev babel-preset-es2015
+babel for jsx
+npm install --save-dev babel-preset-react
+redux
+npm install --save redux
+npm install --save react-redux
+npm install --save-dev redux-devtools
+Loaders for webpack
+Babel loader
+npm install --save-dev babel-loader babel-core babel-preset-env webpack
+For css
+npm install style-loader --save-dev
+Flexbox-grid react
+npm install --save react-flexbox-grid
+styled components
+npm install --save styled-components
+For files
+npm install --save-dev file-loader
+HotModule replacement with css
+npm install --save-dev style-loader css-loader
+Plugins
+npm install html-webpack-plugin --save-dev
+npm install --save react-hot-loader@next
+Then create some folders:
+
+-src
+--components
+--assets
+-dist
+--build
+
+Now create some files to configuration:
+
+index.js
+index.html
+.gitignore(this one is not necessary but for recomendation set node modules here)
+webpack.config.js
+webpack.prod.js
+.babelrc
+container.js at src/components
+PS: Outside those folders. At the project root.
+Here the files of configuration:
+
+
+Finally to create the build run this:
+
+For dev build: 
+npm run build:dev
+And for prod mode:
+npm run build:dist
+
+Last Thing
+Add this at the body in index.html inside dist/build:
+<div id="root"></div>
+
+and now start the project:
+
+npm start
+
+
+For invarient voilation:
+https://stackoverflow.com/questions/26566317/invariant-violation-registercomponent-target-container-is-not-a-dom-elem
+
+By the time script is executed, document element is not available yet, because script itself is in the head. While it's a valid solution to keep script in head and render on DOMContentLoaded event, it's even better to put your script at the very bottom of the body and render root component to a div before it like this:
+
+<html>
+<head>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="/bundle.js"></script>
+</body>
+</html>
+and in your code, call
+
+React.render(<App />, document.getElementById('root'));
+You should always render to a nested div instead of body. Otherwise all sorts of third-party code (Google Font Loader, browser plugins, whatever) can modify the body DOM node when React doesn't expect it, and cause weird errors that are very hard to trace and debug. Read more about this issue.
+
+Done!
