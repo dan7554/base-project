@@ -39,10 +39,10 @@ module.exports = {
   },
   module: {
     rules: [
-     { 
-       test: /\.css$/, 
-       use: ['style-loader', 'css-loader']
-     },
+     {
+      test: /\.(s*)css$/,
+      use: ['style-loader','css-loader', 'sass-loader']
+      },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
