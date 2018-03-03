@@ -1,10 +1,6 @@
 @import 'theme';
 $theme-font: verdana, sans-serif;
 
-header {
-  font: $theme-font;
-  background-color: $themeColor-Light;
-  h1, h2 {
-      color: $themeColor-Dark
-  }
+body {
+  color: $grey-0;
 }
