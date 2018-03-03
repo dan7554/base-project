@@ -100,4 +100,30 @@ https://stackoverflow.com/questions/26566317/invariant-violation-registercompone
 
 
 
-Done!
+.babelrc
+
+    To enable class arrow class props, static props, initalized props...
+    
+    install 
+        npm install --save-dev babel-plugin-transform-class-properties
+
+    add to babelrc
+        ["transform-class-properties", { "spec": true }]
+
+
+     https://babeljs.io/docs/plugins/transform-class-properties/
+ 
+    class Bork {
+        //Property initializer syntax
+        instanceProperty = "bork";
+        boundFunction = () => {
+        return this.instanceProperty;
+        }
+
+        //Static class properties
+        static staticProperty = "babelIsCool";
+        static staticFunction = function() {
+        return Bork.staticProperty;
+        }
+    }
+    .....
