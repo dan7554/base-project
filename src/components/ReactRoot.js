@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import '../styles/container.scss';
+import '../styles/ReactRoot.scss';
 
-class Container extends Component  {
+class ReactRoot extends Component  {
     render(){
         return (
-            <section>
+            <header>
                 <h1>Hello World!</h1>
                 <h2>I'm here</h2>
-            </section>
+            </header>
         )
     }   
 }
 
-export default Container
+export default ReactRoot

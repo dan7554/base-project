@@ -1,11 +1,10 @@
+require('file-loader?name=[name].[ext]!./index.html');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './components/container';
-
+import ReactRoot from './components/ReactRoot';
 
 ReactDOM.render(
-  <Container />,
-  document.getElementById('root')
+  <ReactRoot />,
+  document.getElementById('reactRoot')
 );
-
-//PS: You need to create and export this "container component" in src to work ok?
