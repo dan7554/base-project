@@ -127,3 +127,5 @@ https://stackoverflow.com/questions/26566317/invariant-violation-registercompone
         }
     }
     .....
+
+Ducks approach discussed here : https://github.com/erikras/ducks-modular-redux

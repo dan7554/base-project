@@ -5,6 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
+  node: {
+    fs: 'empty',
+    net:'empty',
+    tls: 'empty'
+  },
   //Content 
   entry: './src/index.js',
   // A SourceMap without column-mappings ignoring loaded Source Maps. 

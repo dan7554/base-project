@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import '../styles/ReactRoot.scss';
+import Login from './Login.js';
 
 class ReactRoot extends Component  {
     render(){
         return (
-            <body>
+            <div>
                 {this.renderHeader()}
                 {this.renderContent()}
                 {this.renderFooter()}
-            </body>
+            </div>
         )
     }   
     renderHeader() {
-        return <h1>Header</h1>;
+        return <h1></h1>;
     }
     renderContent() {
-        return <h1>Content</h1>;
+        return <Login store={this.props.store}/>;
     }
     renderFooter() {
-        return <h1>Footer</h1>;
+        return <h1></h1>;
     }
 }
 
