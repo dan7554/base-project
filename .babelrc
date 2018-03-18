@@ -5,6 +5,7 @@
         "stage-1"
     ],
     "plugins": [
+        "transform-decorators-legacy",
         "react-hot-loader/babel",
         ["transform-class-properties", { "spec": true }]
     ]
