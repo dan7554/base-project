@@ -3,17 +3,13 @@ import 'file-loader?name=[name].[ext]!./index.html';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger'
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'
 import ReactRoot from './components/ReactRoot';
-import combineReducers from './redux/reducer'
+import store from './redux/createStore'
 
-// Redux config
-const logger = createLogger();
-const middleware = applyMiddleware(logger, thunk);
-const store = createStore(combineReducers, middleware);
+if(!Config) {
+  console.error('Config does not exist!', process.env.NODE_ENV)
+}
 
 // Render root
 ReactDOM.render(
