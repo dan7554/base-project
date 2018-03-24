@@ -1,20 +1,45 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ConfigWebpackPlugin = require("config-webpack");
 const publicPath = '/dist/build/';
 
+
 module.exports = env => {
-  console.log('Environment: ', env.NODE_ENV)
+  // Set env for config file loader
   process.env.NODE_ENV = env.NODE_ENV;
+  console.log('Environment: ', env.NODE_ENV)
 
   return {
+    node: {
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
+    },
+    //Content 
     entry: './src/index.js',
+    // A SourceMap without column-mappings ignoring loaded Source Maps. 
+    devtool: 'cheap-module-source-map',
+    plugins: [
+      // Disabling this plugin to autocreate html files on build in favor of manually requiring an html file
+      //new HtmlWebpackPlugin({
+      //  title: 'Hot Module Replacement'
+      //}),
+
+      //Auto replacement of page when i save some file, even css
+      new webpack.HotModuleReplacementPlugin(),
+
+      //Adds a global namespace 'Config' to expose config files managed by the config module
+      new ConfigWebpackPlugin('Config')
+    ],
+
     output: {
       path: path.join(__dirname, publicPath),
       filename: '[name].bundle.js',
       publicPath: publicPath,
-      sourceMapFilename: '[name].map'
+      sourceMapFilename: '[name].map',
     },
+
     devServer: {
       port: 3000,
       host: 'localhost',
@@ -23,26 +48,10 @@ module.exports = env => {
       noInfo: false,
       stats: 'minimal',
       publicPath: publicPath,
-      contentBase: path.join(__dirname, publicPath)
+      contentBase: path.join(__dirname, publicPath),
+      //hotmodulereplacementeplugin
+      hot: true
     },
-    plugins: [
-      new webpack.LoaderOptionsPlugin({
-        minimize: true,
-        debug: false
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        beautify: false,
-        mangle: {
-          screw_ie8: true,
-          keep_fnames: true
-        },
-        compress: {
-          screw_ie8: true
-        },
-        comments: false
-      }),
-      new ConfigWebpackPlugin('Config')
-    ],
     module: {
       rules: [
         {

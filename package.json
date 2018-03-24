@@ -5,9 +5,10 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --open",
-    "dev": "webpack --env=dev --progress --profile --colors",
-    "dist": "webpack --env=prod --progress --profile --colors"
+    "start-dev": "webpack-dev-server --env.NODE_ENV=dev --open --config webpack.dev.js --progress --profile --colors",
+    "start-prod": "webpack-dev-server --env.NODE_ENV=prod --open --config webpack.prod.js",
+    "build-dev": "webpack --env.NODE_ENV=dev --config webpack.dev.js --progress --profile --colors",
+    "build-prod": "webpack --env.NODE_ENV=prod --config webpack.prod.js -p"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +32,8 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "config": "^1.30.0",
+    "config-webpack": "^1.0.4",
     "fetch": "^1.1.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.5",
