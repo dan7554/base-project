@@ -1,12 +1,12 @@
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-//import { routerReducer } from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 
 import userReducer from './ducks/User';
 
 const reducers = combineReducers({
-  //routing: routerReducer,
+  routing: routerReducer,
   user: userReducer
 })
 

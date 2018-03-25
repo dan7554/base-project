@@ -16,7 +16,7 @@ class ReactRoot extends Component  {
         return <h1></h1>;
     }
     renderContent() {
-        return <Login store={this.props.store}/>;
+        return <Login />;
     }
     renderFooter() {
         return <h1></h1>;
