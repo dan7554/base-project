@@ -1,5 +1,6 @@
-next steps...
+TODO
 
-finish login component
-/connect with loopback
-//use config file
+* Dockerize
+
+* Finish login component
+** Connect with intermidiate service 

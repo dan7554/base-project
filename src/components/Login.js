@@ -72,6 +72,9 @@ class Login extends Component  {
                     {text.passwordReenter}
                     <input type='password' value={reenter} onChange={this.handleReenterChange} />
                 </span>
+                {showMismatch && <span className='validation-text'> 
+                    {text.passwordMismatch}
+                </span>}
                 <button onClick={this.onSubmit}>
                     {text.submit}
                 </button>

@@ -1,5 +1,13 @@
+@import 'theme';
+
 .login-form {
-    width: 300px;
+    width: 350px;
+
+    .validation-text {
+        text-align: center;
+        color: $validation-error;
+        margin: 10px 0;
+    }
     span {
         float: left;
         width: 100%;
@@ -7,5 +15,9 @@
     }
     input {
         float: right;
+    }
+    button {
+        margin: 0 auto;
+        display: block;
     }
 }
