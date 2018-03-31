@@ -1,5 +1,7 @@
 export default 
 {
     username: 'User Name:',
-    password : 'Password:'
+    password : 'Password:',
+    passwordReenter: 'Re-enter password:',
+    submit: 'Submit'
 }
