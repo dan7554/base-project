@@ -18,7 +18,6 @@ function  mapDispatchToProps (dispatch) {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Login extends Component  {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -51,12 +50,7 @@ class Login extends Component  {
     }
     render(){
         const { showMismatch, password, reenter, user } = this.state;
-        const classNames = classBuilder(
-            'login-form',
-            {
-                mismatch: showMismatch
-            }
-        );
+        const classNames = classBuilder( 'login-form', { mismatch: showMismatch } );
 
         return (
             <div className={classNames}>
@@ -83,4 +77,4 @@ class Login extends Component  {
     }   
 }
 
-export default Login
+export default Login;

@@ -11,12 +11,12 @@ const INITIAL_STATE = {
 };
 
 // Action Prefix
-const _PREFIX = 'base/user/';
+const _PREFIX = 'user/';
 
 // Actions
-const SUBMIT = `${_PREFIX}SUBMIT`;
-const CREATE = `${_PREFIX}CREATE`;
-const REMOVE = `${_PREFIX}REMOVE`;
+const SUBMIT = `${_PREFIX}submit`;
+const CREATE = `${_PREFIX}create`;
+const REMOVE = `${_PREFIX}remove`;
 
 // Reducer
 export default function userReducer(state = INITIAL_STATE, action = {}) {
@@ -28,7 +28,8 @@ export default function userReducer(state = INITIAL_STATE, action = {}) {
             return{ ...state, user: { created: true } };
         case REMOVE:
             return { ...state, user: { removed: true } }
-        default: return state;
+        default: 
+            return state;
     }
 }
 

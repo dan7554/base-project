@@ -4,10 +4,12 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
 import userReducer from './ducks/User';
+import pageReducer from './ducks/Page';
 
 const reducers = combineReducers({
   routing: routerReducer,
-  user: userReducer
+  user: userReducer,
+  page: pageReducer
 })
 
 // Redux config
