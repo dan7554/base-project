@@ -3,8 +3,11 @@ import $ from "jquery";
 import '../styles/ReactRoot.scss';
 import { connect } from 'react-redux';
 import { updateWidth } from '../redux/ducks/Page';
-import { Router, Route } from 'react-router'
+import { Router, Switch, Route } from 'react-router'
 import Login from './Login.js';
+
+import Test1 from '../pages/Test1'
+import Test2 from '../pages/Test2'
 
 function mapStateToProps(state) {
     return { ...state.page };
@@ -36,7 +39,11 @@ class ReactRoot extends Component {
     render() {
         return (
             <Router history={this.props.history}>
-                <Route path="/" component={Login} />
+                <Switch>
+                    <Route exact path="/" component={Login} />
+                    <Route path="/test1" component={Test1} />
+                    <Route path="/test2" component={Test2} />
+                </Switch>
             </Router>
         );
     }

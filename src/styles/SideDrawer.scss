@@ -1,0 +1,40 @@
+.side-drawer {
+    width: 0;
+    position: absolute;
+    height: 100%;
+
+    .side-drawer__container {
+        background-color: blue;
+        height: 100%;
+        width: 0;
+        transition: width .2s;
+        z-index: 100;
+        position: fixed;
+    }
+    .side-drawer__clickoff-overlay {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 99;
+    }
+    &--open {
+        .side-drawer__container {
+            width: 300px;
+        }
+        .side-drawer__clickoff-overlay  {
+            width: 100%;
+        }
+        width: 100%;
+    }
+}
+
+.xxs, .xs, .sm {
+    .side-drawer {
+        top: 0;
+        &--open {
+            .side-drawer__container {
+                width: 85%;
+            }
+        }
+    }
+}

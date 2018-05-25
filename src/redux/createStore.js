@@ -5,11 +5,13 @@ import { routerReducer } from 'react-router-redux';
 
 import userReducer from './ducks/User';
 import pageReducer from './ducks/Page';
+import sideDrawerReducer from './ducks/SideDrawer';
 
 const reducers = combineReducers({
   routing: routerReducer,
   user: userReducer,
-  page: pageReducer
+  page: pageReducer,
+  sideDrawer: sideDrawerReducer
 })
 
 // Redux config

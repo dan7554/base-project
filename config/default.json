@@ -1,6 +1,6 @@
 {
     "devbar": {
-        "enabled": true,
+        "enabled": false,
         "defaultBreakpoint": "lg"
     },
     "db": {

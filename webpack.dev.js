@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ConfigWebpackPlugin = require("config-webpack");
+const ConfigWebpackPlugin = require('config-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const publicPath = '/dist/build/';
 
 
@@ -30,7 +31,7 @@ module.exports = env => {
       new webpack.HotModuleReplacementPlugin(),
 
       //Adds a global namespace 'Config' to expose config files managed by the config module
-      new ConfigWebpackPlugin('Config')
+      new ConfigWebpackPlugin('Config'),
     ],
 
     output: {
