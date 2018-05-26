@@ -2,11 +2,9 @@ import breakpoint from '../../utility/breakpoint';
 
 //Initial State
 const INITIAL_STATE = {
-    page: {
-        width: 0,
-        forcedWidth: 0,
-        breakpoint: ''
-    }
+    width: 0,
+    forcedWidth: 0,
+    breakpoint: ''
 };
 
 // Action Prefix
@@ -22,20 +20,14 @@ export default function pageReducer(state = INITIAL_STATE, action = {}) {
         case UPDATE_WIDTH:
             return {
                 ...state,
-                page: {
-                    ...state.page,
-                    width: action.width,
-                    breakpoint: breakpoint(action.width)
-                }
+                width: action.width,
+                breakpoint: breakpoint(action.width)
             };
         case FORCE_WIDTH:
             return {
                 ...state,
-                page: {
-                    ...state.page,
-                    forcedWidth: action.width,
-                    breakpoint: breakpoint(action.width)
-                }
+                forcedWidth: action.width,
+                breakpoint: breakpoint(action.width)
             };
         default:
             return state;
@@ -51,6 +43,7 @@ export function updateWidth(width) {
 }
 
 export function forceWidth(width) {
+
     return {
         type: FORCE_WIDTH,
         width
