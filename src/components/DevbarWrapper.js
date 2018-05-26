@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import $ from "jquery";
 import { connect } from 'react-redux';
 import { forceWidth } from '../redux/ducks/Page';
 import '../styles/DevbarWrapper.scss';
+
 
 function mapStateToProps(state) {
     return { ...state.page };
@@ -20,8 +22,7 @@ class DevbarWrapper extends Component  {
         super(props);
         if (Config.devbar.enabled) {
             this.setDefaultBreakpoint();
-        }
-            
+        }   
     }
     
     setDefaultBreakpoint = () => {
@@ -58,18 +59,29 @@ class DevbarWrapper extends Component  {
             this.props.children
         ), this.el);
 
-        var parentStyleSheets = parent.document.styleSheets;
-        var cssString = "";
-        for (var i = 0, count = parentStyleSheets.length; i < count; ++i) {
-            if (parentStyleSheets[i].cssRules) {
-                var cssRules = parentStyleSheets[i].cssRules;
-                for (var j = 0, countJ = cssRules.length; j < countJ; ++j)
+        let parentStyleSheets = parent.document.styleSheets;
+        let cssString = "";
+        let links = [];
+        for (let i = 0, count = parentStyleSheets.length; i < count; ++i) {
+            if (parentStyleSheets[i].href === null && parentStyleSheets[i].cssRules) {
+                let cssRules = parentStyleSheets[i].cssRules;
+                for (let j = 0, countJ = cssRules.length; j < countJ; ++j)
                     cssString += cssRules[j].cssText;
             }
-            else
-                cssString += parentStyleSheets[i].cssText;  // IE8 and earlier
+            else {
+                if (parentStyleSheets[i].href !== null) {
+                    let link = document.createElement("link");
+                    link.href = parentStyleSheets[i].href;
+                    link.type = parentStyleSheets[i].type;
+                    link.rel = 'stylesheet';
+                    links.push(link);
+                } else {
+                    cssString += parentStyleSheets[i].cssText;  // IE8 and earlier
+                }
+            }
         }
-        var style = document.createElement("style");
+
+        let style = document.createElement("style");
         style.type = "text/css";
         try {
             style.innerHTML = cssString;
@@ -77,14 +89,22 @@ class DevbarWrapper extends Component  {
         catch (ex) {
             style.styleSheet.cssText = cssString;  // IE8 and earlier
         }
-        ReactDOM.findDOMNode(this.refs.frame).contentDocument.getElementsByTagName("head")[0].appendChild(style);
+        let head = ReactDOM.findDOMNode(this.refs.frame).contentDocument.getElementsByTagName("head")[0];
+        head.innerHTML = '';
+        links.forEach((link) => {
+            head.appendChild(link);
+        });
+        head.appendChild(style);
     }
     
     onBreakClick = (label, index) => {
         const { forceWidth } = this.props;
         const lastBreakpoint = index + 1 === Config.breakpoints.length;
         const frameWidth = lastBreakpoint ? '100%' : Config.breakpoints[label].max;
-        forceWidth(frameWidth);
+        const windowWidth = $(window).width();
+        // Cap the max at the actual window width
+        forceWidth(frameWidth <= windowWidth ? frameWidth : windowWidth);
+
     }
 
     render(){
@@ -93,10 +113,10 @@ class DevbarWrapper extends Component  {
         }
 
         const breakLabels = Object.keys(Config.breakpoints);
-        const { page } = this.props;
+        const { forcedWidth, breakpoint } = this.props;
         return (
             <div className='devbar-wrapper' >
-                <span className='current-breakpoint'> {page.breakpoint} </span>
+                <span className='current-breakpoint'> {`${breakpoint}@${forcedWidth}px`} </span>
                 <div className='breakpoints'>
                     {breakLabels.map((label, index) => {
                         const width = Config.breakpoints[label].max - Config.breakpoints[label].min;
@@ -112,7 +132,7 @@ class DevbarWrapper extends Component  {
                         );
                     })}
                 </div>
-                <iframe style={{ width: page.forcedWidth + 'px' }} ref='frame' />
+                <iframe style={{ width: forcedWidth + 'px' }} ref='frame' />
             </div>
         )
     }   
