@@ -1,4 +1,10 @@
-$grey-f:#FFFFFF;
+$white:#FFFFFF;
+$grey-e:#EEEEEE;
+$grey-f:#DDDDDD;
+$grey-c:#CCCCCC;
+$grey-b:#BBBBBB;
+$grey-a:#AAAAAA;
+$grey-9:#999999;
 $grey-8:#888888;
 $grey-7:#777777;
 $grey-6:#666666;
@@ -7,6 +13,14 @@ $grey-4:#444444;
 $grey-3:#333333;
 $grey-2:#222222;
 $grey-1:#111111;
-$grey-0:#000000;
+$black:#000000;
 
-$validation-error: red;
+$validation-error: rgb(200, 0, 0);
+
+$colorOne: #D8CAA8;
+$colorTwo: #5c832F;
+$colorThree: #284907;
+$colorFour: #382513;
+$colorFive: #363942;
+
+$maxPageWidth: 1312px;

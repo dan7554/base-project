@@ -2,12 +2,10 @@ import fetch from 'isomorphic-fetch';
 
 //Initial State
 const INITIAL_STATE = {
-    user: {
-        submitting: false,
-        created: false,
-        removed: false,
-        username: null
-    }
+    submitting: false,
+    created: false,
+    removed: false,
+    username: null
 };
 
 // Action Prefix

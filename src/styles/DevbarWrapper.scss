@@ -1,12 +1,14 @@
-iframe {
-    border: solid 1px grey;
-    height:100%;
-    position: absolute;
-    left: 0;
-}
 
 .devbar-wrapper {
     height: 100%;
+
+    .current-breakpoint {
+        font-size: 25px;
+        margin: 7px;
+        display: inline-block;
+        font-weight: 700;
+    }
+
     .breakpoints {
         height: 40px;
         
@@ -17,5 +19,9 @@ iframe {
             display: inline-block;
             position: absolute;
         }
+    }
+    .dev-frame {
+        border: solid 1px grey;
+        height: 100%;
     }
 }
