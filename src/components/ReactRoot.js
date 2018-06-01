@@ -22,10 +22,10 @@ function mapDispatchToProps(dispatch) {
 @connect(mapStateToProps, mapDispatchToProps)
 class ReactRoot extends Component {
     updatePageWidth = () => {
-        const { updateWidth, page } = this.props;
-        const newWidth = page.forcedWidth > 0 ? page.forcedWidth : $(window).width();
+        const { updateWidth, forcedWidth, width } = this.props;
+        const newWidth = forcedWidth > 0 ? forcedWidth : $(window).width();
 
-        if ( page.width !== newWidth ) {
+        if ( width !== newWidth ) {
             updateWidth(newWidth);
         }
     }
