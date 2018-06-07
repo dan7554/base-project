@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { forceWidth } from '../redux/ducks/Page';
 
 function mapStateToProps(state) {
-    return { ...state.page.page };
+    return { ...state.page };
 }
 
 function mapDispatchToProps(dispatch) {

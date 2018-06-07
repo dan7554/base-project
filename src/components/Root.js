@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import $ from "jquery";
-import '../styles/ReactRoot.scss';
+import '../styles/Root.scss';
 import { connect } from 'react-redux';
 import { updateWidth } from '../redux/ducks/Page';
 import { Router, Switch, Route } from 'react-router'
@@ -20,7 +20,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
-class ReactRoot extends Component {
+class Root extends Component {
     updatePageWidth = () => {
         const { updateWidth, forcedWidth, width } = this.props;
         const newWidth = forcedWidth > 0 ? forcedWidth : $(window).width();
@@ -49,4 +49,4 @@ class ReactRoot extends Component {
     }
 }
 
-export default ReactRoot
+export default Root

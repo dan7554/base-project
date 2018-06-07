@@ -54,18 +54,14 @@ class Login extends Component  {
 
         return (
             <div className={classNames}>
-                <span>
+                <label for='login-user'>
                     {text.username}
-                    <input value={user} onChange={this.handleUserChange} />
-                </span>
-                <span>
-                    {text.password}
-                    <input type='password' value={password} onChange={this.handlePasswordChange} />
-                </span>
-                <span>
-                    {text.passwordReenter}
-                    <input type='password' value={reenter} onChange={this.handleReenterChange} />
-                </span>
+                    <input id='login-user'value={user} onChange={this.handleUserChange} />
+                </label>
+                <label for='password-user'>
+                    {text.username}
+                    <input id='login-password' type='password' value={password} onChange={this.handlePasswordChange} />
+                </label>
                 {showMismatch && <span className='validation-text'> 
                     {text.passwordMismatch}
                 </span>}

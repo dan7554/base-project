@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a49bd93d98957fc04278"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a2ff1bdd60d6f4e7fae4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2148,13 +2148,13 @@ function forceWidth(width) {
         return;
     }
 
-    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(_PREFIX, '_PREFIX', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(UPDATE_WIDTH, 'UPDATE_WIDTH', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(FORCE_WIDTH, 'FORCE_WIDTH', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(pageReducer, 'pageReducer', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(updateWidth, 'updateWidth', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
-    reactHotLoader.register(forceWidth, 'forceWidth', 'C:/dan7554/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(_PREFIX, '_PREFIX', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(UPDATE_WIDTH, 'UPDATE_WIDTH', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(FORCE_WIDTH, 'FORCE_WIDTH', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(pageReducer, 'pageReducer', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(updateWidth, 'updateWidth', 'D:/base-project/src/redux/ducks/Page.js');
+    reactHotLoader.register(forceWidth, 'forceWidth', 'D:/base-project/src/redux/ducks/Page.js');
     leaveModule(module);
 })();
 
@@ -2823,7 +2823,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, ".login-form {\n  width: 350px; }\n  .login-form .validation-text {\n    text-align: center;\n    color: #c80000;\n    margin: 10px 0; }\n  .login-form span {\n    float: left;\n    width: 100%;\n    margin: 5px 0; }\n  .login-form input {\n    float: right; }\n  .login-form button {\n    margin: 0 auto;\n    display: block; }\n", ""]);
+exports.push([module.i, ".login-form {\n  width: 350px; }\n  .login-form .validation-text {\n    text-align: center;\n    color: #c80000;\n    margin: 10px 0; }\n  .login-form span {\n    float: left;\n    width: 100%;\n    margin: 5px 0; }\n  .login-form input {\n    float: right; }\n  .login-form button {\n    margin: 0 auto;\n    display: block; }\n\n.xs .login-form, .xxs .login-form {\n  width: 100%;\n  padding: 0 5px; }\n", ""]);
 
 // exports
 
@@ -2893,7 +2893,7 @@ function classBuilder(baseClass, classMaps) {
         return;
     }
 
-    reactHotLoader.register(classBuilder, 'classBuilder', 'C:/dan7554/base-project/src/utility/classBuilder.js');
+    reactHotLoader.register(classBuilder, 'classBuilder', 'D:/base-project/src/utility/classBuilder.js');
     leaveModule(module);
 })();
 
@@ -2978,11 +2978,11 @@ function toggleDrawer(username) {
         return;
     }
 
-    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'C:/dan7554/base-project/src/redux/ducks/SideDrawer.js');
-    reactHotLoader.register(_PREFIX, '_PREFIX', 'C:/dan7554/base-project/src/redux/ducks/SideDrawer.js');
-    reactHotLoader.register(TOGGLE, 'TOGGLE', 'C:/dan7554/base-project/src/redux/ducks/SideDrawer.js');
-    reactHotLoader.register(sideDrawerReducer, 'sideDrawerReducer', 'C:/dan7554/base-project/src/redux/ducks/SideDrawer.js');
-    reactHotLoader.register(toggleDrawer, 'toggleDrawer', 'C:/dan7554/base-project/src/redux/ducks/SideDrawer.js');
+    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'D:/base-project/src/redux/ducks/SideDrawer.js');
+    reactHotLoader.register(_PREFIX, '_PREFIX', 'D:/base-project/src/redux/ducks/SideDrawer.js');
+    reactHotLoader.register(TOGGLE, 'TOGGLE', 'D:/base-project/src/redux/ducks/SideDrawer.js');
+    reactHotLoader.register(sideDrawerReducer, 'sideDrawerReducer', 'D:/base-project/src/redux/ducks/SideDrawer.js');
+    reactHotLoader.register(toggleDrawer, 'toggleDrawer', 'D:/base-project/src/redux/ducks/SideDrawer.js');
     leaveModule(module);
 })();
 
@@ -15174,14 +15174,14 @@ function submitUserAsync(userCred) {
         return;
     }
 
-    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(_PREFIX, '_PREFIX', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(SUBMIT, 'SUBMIT', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(CREATE, 'CREATE', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(REMOVE, 'REMOVE', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(userReducer, 'userReducer', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(submitUser, 'submitUser', 'C:/dan7554/base-project/src/redux/ducks/User.js');
-    reactHotLoader.register(submitUserAsync, 'submitUserAsync', 'C:/dan7554/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(INITIAL_STATE, 'INITIAL_STATE', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(_PREFIX, '_PREFIX', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(SUBMIT, 'SUBMIT', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(CREATE, 'CREATE', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(REMOVE, 'REMOVE', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(userReducer, 'userReducer', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(submitUser, 'submitUser', 'D:/base-project/src/redux/ducks/User.js');
+    reactHotLoader.register(submitUserAsync, 'submitUserAsync', 'D:/base-project/src/redux/ducks/User.js');
     leaveModule(module);
 })();
 
@@ -15211,9 +15211,9 @@ var _reactRouterRedux = __webpack_require__(51);
 
 var _history = __webpack_require__(54);
 
-var _ReactRoot = __webpack_require__(103);
+var _Root = __webpack_require__(103);
 
-var _ReactRoot2 = _interopRequireDefault(_ReactRoot);
+var _Root2 = _interopRequireDefault(_Root);
 
 var _createStore = __webpack_require__(139);
 
@@ -15245,7 +15245,7 @@ _reactDom2.default.render(_react2.default.createElement(
   _react2.default.createElement(
     _reactRedux.Provider,
     { store: _createStore2.default },
-    _react2.default.createElement(_ReactRoot2.default, { history: history })
+    _react2.default.createElement(_Root2.default, { history: history })
   )
 ), document.getElementById('reactRoot'));
 ;
@@ -15259,7 +15259,7 @@ _reactDom2.default.render(_react2.default.createElement(
     return;
   }
 
-  reactHotLoader.register(history, 'history', 'C:/dan7554/base-project/src/index.js');
+  reactHotLoader.register(history, 'history', 'D:/base-project/src/index.js');
   leaveModule(module);
 })();
 
@@ -35336,21 +35336,21 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-var ReactRoot = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps), _dec(_class = function (_Component) {
-    _inherits(ReactRoot, _Component);
+var Root = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps), _dec(_class = function (_Component) {
+    _inherits(Root, _Component);
 
-    function ReactRoot() {
+    function Root() {
         var _ref;
 
         var _temp, _this, _ret;
 
-        _classCallCheck(this, ReactRoot);
+        _classCallCheck(this, Root);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReactRoot.__proto__ || Object.getPrototypeOf(ReactRoot)).call.apply(_ref, [this].concat(args))), _this), Object.defineProperty(_this, 'updatePageWidth', {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Root.__proto__ || Object.getPrototypeOf(Root)).call.apply(_ref, [this].concat(args))), _this), Object.defineProperty(_this, 'updatePageWidth', {
             enumerable: true,
             writable: true,
             value: function value() {
@@ -35368,7 +35368,7 @@ var ReactRoot = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToP
         }), _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    _createClass(ReactRoot, [{
+    _createClass(Root, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
             window.addEventListener('resize', this.updatePageWidth);
@@ -35401,7 +35401,7 @@ var ReactRoot = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToP
         }
     }]);
 
-    return ReactRoot;
+    return Root;
 }(_react.Component)) || _class);
 var _default = ReactRoot;
 exports.default = _default;
@@ -35416,10 +35416,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/components/ReactRoot.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/components/ReactRoot.js');
-    reactHotLoader.register(ReactRoot, 'ReactRoot', 'C:/dan7554/base-project/src/components/ReactRoot.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/components/ReactRoot.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/components/Root.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/components/Root.js');
+    reactHotLoader.register(Root, 'Root', 'D:/base-project/src/components/Root.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/components/Root.js');
     leaveModule(module);
 })();
 
@@ -35625,7 +35625,7 @@ function breakpoint(pageWidth) {
         return;
     }
 
-    reactHotLoader.register(breakpoint, 'breakpoint', 'C:/dan7554/base-project/src/utility/breakpoint.js');
+    reactHotLoader.register(breakpoint, 'breakpoint', 'D:/base-project/src/utility/breakpoint.js');
     leaveModule(module);
 })();
 
@@ -38882,12 +38882,6 @@ var Login = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps
                     _Login2.default.password,
                     _react2.default.createElement('input', { type: 'password', value: password, onChange: this.handlePasswordChange })
                 ),
-                _react2.default.createElement(
-                    'span',
-                    null,
-                    _Login2.default.passwordReenter,
-                    _react2.default.createElement('input', { type: 'password', value: reenter, onChange: this.handleReenterChange })
-                ),
                 showMismatch && _react2.default.createElement(
                     'span',
                     { className: 'validation-text' },
@@ -38922,10 +38916,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/components/Login.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/components/Login.js');
-    reactHotLoader.register(Login, 'Login', 'C:/dan7554/base-project/src/components/Login.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/components/Login.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/components/Login.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/components/Login.js');
+    reactHotLoader.register(Login, 'Login', 'D:/base-project/src/components/Login.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/components/Login.js');
     leaveModule(module);
 })();
 
@@ -39497,7 +39491,7 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/assets/text/Login.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/assets/text/Login.js');
     leaveModule(module);
 })();
 
@@ -39607,10 +39601,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/pages/Test1.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/pages/Test1.js');
-    reactHotLoader.register(Test1, 'Test1', 'C:/dan7554/base-project/src/pages/Test1.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/pages/Test1.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/pages/Test1.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/pages/Test1.js');
+    reactHotLoader.register(Test1, 'Test1', 'D:/base-project/src/pages/Test1.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/pages/Test1.js');
     leaveModule(module);
 })();
 
@@ -39755,10 +39749,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/components/TitleBar.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/components/TitleBar.js');
-    reactHotLoader.register(TitleBar, 'TitleBar', 'C:/dan7554/base-project/src/components/TitleBar.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/components/TitleBar.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/components/TitleBar.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/components/TitleBar.js');
+    reactHotLoader.register(TitleBar, 'TitleBar', 'D:/base-project/src/components/TitleBar.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/components/TitleBar.js');
     leaveModule(module);
 })();
 
@@ -44830,7 +44824,7 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/assets/text/TitleBar.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/assets/text/TitleBar.js');
     leaveModule(module);
 })();
 
@@ -44945,10 +44939,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/components/SideDrawer.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/components/SideDrawer.js');
-    reactHotLoader.register(SideDrawer, 'SideDrawer', 'C:/dan7554/base-project/src/components/SideDrawer.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/components/SideDrawer.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/components/SideDrawer.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/components/SideDrawer.js');
+    reactHotLoader.register(SideDrawer, 'SideDrawer', 'D:/base-project/src/components/SideDrawer.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/components/SideDrawer.js');
     leaveModule(module);
 })();
 
@@ -45035,7 +45029,7 @@ exports.default = _default;
     return;
   }
 
-  reactHotLoader.register(_default, "default", "C:/dan7554/base-project/src/assets/text/SideDrawer.js");
+  reactHotLoader.register(_default, "default", "D:/base-project/src/assets/text/SideDrawer.js");
   leaveModule(module);
 })();
 
@@ -45114,8 +45108,8 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(Test2, 'Test2', 'C:/dan7554/base-project/src/pages/Test2.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/pages/Test2.js');
+    reactHotLoader.register(Test2, 'Test2', 'D:/base-project/src/pages/Test2.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/pages/Test2.js');
     leaveModule(module);
 })();
 
@@ -45188,11 +45182,11 @@ exports.default = _default;
     return;
   }
 
-  reactHotLoader.register(reducers, 'reducers', 'C:/dan7554/base-project/src/redux/createStore.js');
-  reactHotLoader.register(logger, 'logger', 'C:/dan7554/base-project/src/redux/createStore.js');
-  reactHotLoader.register(middleware, 'middleware', 'C:/dan7554/base-project/src/redux/createStore.js');
-  reactHotLoader.register(store, 'store', 'C:/dan7554/base-project/src/redux/createStore.js');
-  reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/redux/createStore.js');
+  reactHotLoader.register(reducers, 'reducers', 'D:/base-project/src/redux/createStore.js');
+  reactHotLoader.register(logger, 'logger', 'D:/base-project/src/redux/createStore.js');
+  reactHotLoader.register(middleware, 'middleware', 'D:/base-project/src/redux/createStore.js');
+  reactHotLoader.register(store, 'store', 'D:/base-project/src/redux/createStore.js');
+  reactHotLoader.register(_default, 'default', 'D:/base-project/src/redux/createStore.js');
   leaveModule(module);
 })();
 
@@ -45336,7 +45330,7 @@ var DevbarWrapper = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatc
             }
         });
 
-        if (false) {
+        if (true) {
             _this.setDefaultBreakpoint();
         }
         return _this;
@@ -45345,7 +45339,7 @@ var DevbarWrapper = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatc
     _createClass(DevbarWrapper, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            if (false) {
+            if (true) {
                 var frameBody = _reactDom2.default.findDOMNode(this.refs.frame).contentDocument.body,
                     el = document.createElement('div');
                 frameBody.appendChild(el);
@@ -45356,7 +45350,7 @@ var DevbarWrapper = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatc
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate() {
-            if (false) {
+            if (true) {
                 this.updateIFrameContents();
             }
         }
@@ -45406,7 +45400,7 @@ var DevbarWrapper = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatc
         value: function render() {
             var _this2 = this;
 
-            if (true) {
+            if (false) {
                 return this.props.children;
             }
 
@@ -45467,10 +45461,10 @@ exports.default = _default;
         return;
     }
 
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'C:/dan7554/base-project/src/components/DevbarWrapper.js');
-    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/dan7554/base-project/src/components/DevbarWrapper.js');
-    reactHotLoader.register(DevbarWrapper, 'DevbarWrapper', 'C:/dan7554/base-project/src/components/DevbarWrapper.js');
-    reactHotLoader.register(_default, 'default', 'C:/dan7554/base-project/src/components/DevbarWrapper.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', 'D:/base-project/src/components/DevbarWrapper.js');
+    reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', 'D:/base-project/src/components/DevbarWrapper.js');
+    reactHotLoader.register(DevbarWrapper, 'DevbarWrapper', 'D:/base-project/src/components/DevbarWrapper.js');
+    reactHotLoader.register(_default, 'default', 'D:/base-project/src/components/DevbarWrapper.js');
     leaveModule(module);
 })();
 

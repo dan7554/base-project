@@ -54,3 +54,17 @@ export function submitUserAsync(userCred) {
          });
     }
 }
+
+export function registerAsync(userCred) {
+    return (dispatch) => {
+        fetch(Config.users.url, {
+            method: 'post',
+            mode: 'no-cors',
+            headers: {}
+        }).then((res,a) => {
+            console.log('Works!',res,a);
+        }).catch((error,a) => {
+            console.log('error!',error,a);
+         });
+    }
+}

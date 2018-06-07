@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { createBrowserHistory } from 'history'; 
-import ReactRoot from './components/ReactRoot';
+import Root from './components/Root';
 import store from './redux/createStore'
 import DevbarWrapper from './components/DevbarWrapper.js'
 
@@ -20,7 +20,7 @@ const history = syncHistoryWithStore(createBrowserHistory(), store);
 ReactDOM.render(
   <DevbarWrapper store={store}>
     <Provider store={store}>
-      <ReactRoot history={history} />
+      <Root history={history} />
     </Provider>
   </DevbarWrapper>
   ,

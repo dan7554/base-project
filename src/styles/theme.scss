@@ -24,3 +24,10 @@ $colorFour: #382513;
 $colorFive: #363942;
 
 $maxPageWidth: 1312px;
+
+input {
+    height: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    border: solid 1px $colorTwo;
+}
