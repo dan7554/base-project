@@ -16,7 +16,7 @@ module.exports = env => {
       sourceMapFilename: '[name].map'
     },
     devServer: {
-      port: 3000,
+      port: 3001,
       host: 'localhost',
       //Be possible go back pressing the "back" button at chrome
       historyApiFallback: true,

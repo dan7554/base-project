@@ -5,10 +5,10 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --env.NODE_ENV=dev --open --config webpack.dev.js --progress --profile --colors",
-    "start-dev": "webpack-dev-server --env.NODE_ENV=dev --open --config webpack.dev.js --progress --profile --colors",
-    "start-prod": "webpack-dev-server --env.NODE_ENV=prod --open --config webpack.prod.js",
-    "build-dev": "webpack --env.NODE_ENV=dev --config webpack.dev.js --progress --profile --colors",
+    "start": "webpack-dev-server --host 127.0.0.1 --env.NODE_ENV=dev --open --config webpack.dev.js --progress --profile --colors",
+    "start-dev": "webpack-dev-server --host 127.0.0.1 --env.NODE_ENV=dev --open --config webpack.dev.js --progress --profile --colors",
+    "start-prod": "webpack-dev-server --host 127.0.0.1 --env.NODE_ENV=prod --open --config webpack.prod.js",
+    "build-dev": "webpack --host 127.0.0.1 --env.NODE_ENV=dev --config webpack.dev.js --progress --profile --colors",
     "build-prod": "webpack --env.NODE_ENV=prod --config webpack.prod.js -p"
   },
   "author": "",

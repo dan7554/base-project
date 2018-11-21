@@ -21,7 +21,7 @@ module.exports = env => {
     entry: './src/index.js',
     // A SourceMap without column-mappings ignoring loaded Source Maps. 
     devtool: 'cheap-module-source-map',
-    plugins: [
+    plugins: [  
       // Disabling this plugin to autocreate html files on build in favor of manually requiring an html file
       //new HtmlWebpackPlugin({
       //  title: 'Hot Module Replacement'
@@ -42,7 +42,7 @@ module.exports = env => {
     },
 
     devServer: {
-      port: 3000,
+      port: 3001,
       host: 'localhost',
       //Be possible go back pressing the "back" button at chrome
       historyApiFallback: true,
