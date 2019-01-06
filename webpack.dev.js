@@ -1,14 +1,14 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ConfigWebpackPlugin = require('config-webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const publicPath = '/dist/build/';
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ConfigWebpackPlugin = require('config-webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const publicPath = '/dist/build/'
 
 
 module.exports = env => {
   // Set env for config file loader
-  process.env.NODE_ENV = env.NODE_ENV;
+  process.env.NODE_ENV = env.NODE_ENV
   console.log('Environment: ', env.NODE_ENV)
 
   return {
@@ -52,6 +52,14 @@ module.exports = env => {
       contentBase: path.join(__dirname, publicPath),
       //hotmodulereplacementeplugin
       hot: true
+    },
+    resolve: {
+      alias: {
+        '@ducks': path.join(__dirname, 'src/redux/ducks'),
+        '@assets': path.join(__dirname, 'src/assets'),
+        '@src': path.join(__dirname, 'src'),
+        '@utility': path.join(__dirname, 'src/utility')
+      },
     },
     module: {
       rules: [

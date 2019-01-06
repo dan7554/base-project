@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import '../styles/SideDrawer.scss';
-import { connect } from 'react-redux';
-import { toggleDrawer } from '../redux/ducks/SideDrawer';
-import text from '../assets/text/SideDrawer';
-import classBuilder from '../utility/classBuilder';
+import React, { Component } from 'react'
+import './SideDrawer.scss'
+import { connect } from 'react-redux'
+import { toggleDrawer } from '@ducks/SideDrawer'
+import text from '@assets/text/SideDrawer'
+import classBuilder from '@utility/classBuilder'
 
 function mapStateToProps (state) {
-    return { ...state.sideDrawer };
+    return { ...state.sideDrawer }
   }
   
 function  mapDispatchToProps (dispatch) {
     return { 
         toggleDrawer: () => dispatch(toggleDrawer())
-    };
+    }
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
@@ -20,8 +20,8 @@ class SideDrawer extends Component {
     
 
     render() {
-        let {isOpen} = this.props;
-        const classNames = classBuilder( 'side-drawer', { 'side-drawer--open': isOpen } );
+        let {isOpen} = this.props
+        const classNames = classBuilder( 'side-drawer', { 'side-drawer--open': isOpen } )
 
          return (
             <div className={classNames}>
@@ -30,8 +30,8 @@ class SideDrawer extends Component {
                 />
                 <div className='side-drawer__container' />
             </div>
-        );
+        )
     }
 }
 
-export default SideDrawer;
+export default SideDrawer

@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import fetch from 'isomorphic-fetch'
 
 //Initial State
 const INITIAL_STATE = {
@@ -6,28 +6,28 @@ const INITIAL_STATE = {
     created: false,
     removed: false,
     username: null
-};
+}
 
 // Action Prefix
-const _PREFIX = 'user/';
+const _PREFIX = 'user/'
 
 // Actions
-const SUBMIT = `${_PREFIX}submit`;
-const CREATE = `${_PREFIX}create`;
-const REMOVE = `${_PREFIX}remove`;
+const SUBMIT = `${_PREFIX}submit`
+const CREATE = `${_PREFIX}create`
+const REMOVE = `${_PREFIX}remove`
 
 // Reducer
 export default function userReducer(state = INITIAL_STATE, action = {}) {
 
     switch (action.type) {
         case SUBMIT:
-            return { ...state, user: { submitting: true, username: action.username } };
+            return { ...state, user: { submitting: true, username: action.username } }
         case CREATE:
-            return{ ...state, user: { created: true } };
+            return{ ...state, user: { created: true } }
         case REMOVE:
             return { ...state, user: { removed: true } }
         default: 
-            return state;
+            return state
     }
 }
 
@@ -48,10 +48,10 @@ export function submitUserAsync(userCred) {
             mode: 'no-cors',
             headers: {}
         }).then((res,a) => {
-            console.log('Works!',res,a);
+            console.log('Works!',res,a)
         }).catch((error,a) => {
-            console.log('error!',error,a);
-         });
+            console.log('error!',error,a)
+         })
     }
 }
 
@@ -62,9 +62,9 @@ export function registerAsync(userCred) {
             mode: 'no-cors',
             headers: {}
         }).then((res,a) => {
-            console.log('Works!',res,a);
+            console.log('Works!',res,a)
         }).catch((error,a) => {
-            console.log('error!',error,a);
-         });
+            console.log('error!',error,a)
+         })
     }
 }

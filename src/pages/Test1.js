@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
-import TitleBar from '../components/TitleBar';
-import SideDrawer from '../components/SideDrawer';
-import { connect } from 'react-redux';
-import { forceWidth } from '../redux/ducks/Page';
+import React, { Component } from 'react'
+import TitleBar from '../components/TitleBar/TitleBar'
+import SideDrawer from '../components/SideDrawer/SideDrawer'
+import { connect } from 'react-redux'
+import { forceWidth } from '../redux/ducks/Page'
 
-function mapStateToProps(state) {
-    return { ...state.page };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {};
-}
-
-@connect(mapStateToProps, mapDispatchToProps)
 class Test1 extends Component {
     render() {
-        const {breakpoint} = this.props;
+        const {breakpoint} = this.props
         return (
             <div className={breakpoint}>
                 <TitleBar title='Title' subtitle='subtitle' />
@@ -44,8 +35,16 @@ Smallest directly families surprise honoured am an. Speaking replying mistress h
 
                 </p>
             </div>
-        );
+        )
     }
 }
 
-export default Test1;
+function mapStateToProps(state) {
+    return { ...state.page }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Test1)

@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
-import '../styles/TitleBar.scss';
-import { connect } from 'react-redux';
-import { toggleDrawer } from '../redux/ducks/SideDrawer';
-import text from '../assets/text/TitleBar';
-import classBuilder from '../utility/classBuilder';
+import React, { Component } from 'react'
+import './TitleBar.scss'
+import { connect } from 'react-redux'
+import { toggleDrawer } from '@ducks/SideDrawer'
 
 function mapStateToProps (state) {
-    return {};
+    return {}
   }
   
 function  mapDispatchToProps (dispatch) {
     return { 
         toggleDrawer: () => dispatch(toggleDrawer())
-    };
+    }
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
 class TitleBar extends Component {
     render() {
-        let {title, subtitle, logo} = this.props;
+        let {title, subtitle, logo} = this.props
         return (
             <div className='title-bar'>
                <div className='title-bar__container'>
@@ -45,8 +43,8 @@ class TitleBar extends Component {
                     }
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default TitleBar;
+export default TitleBar

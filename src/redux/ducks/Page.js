@@ -1,18 +1,18 @@
-import breakpoint from '../../utility/breakpoint';
+import breakpoint from '../../utility/breakpoint'
 
 //Initial State
 const INITIAL_STATE = {
     width: 0,
     forcedWidth: 0,
     breakpoint: ''
-};
+}
 
 // Action Prefix
-const _PREFIX = 'page/';
+const _PREFIX = 'page/'
 
 // Actions
-const UPDATE_WIDTH = `${_PREFIX}updateWidth`;
-const FORCE_WIDTH = `${_PREFIX}forceWidth`;
+const UPDATE_WIDTH = `${_PREFIX}updateWidth`
+const FORCE_WIDTH = `${_PREFIX}forceWidth`
 
 // Reducer
 export default function pageReducer(state = INITIAL_STATE, action = {}) {
@@ -22,15 +22,15 @@ export default function pageReducer(state = INITIAL_STATE, action = {}) {
                 ...state,
                 width: action.width,
                 breakpoint: breakpoint(action.width)
-            };
+            }
         case FORCE_WIDTH:
             return {
                 ...state,
                 forcedWidth: action.width,
                 breakpoint: breakpoint(action.width)
-            };
+            }
         default:
-            return state;
+            return state
     }
 }
 

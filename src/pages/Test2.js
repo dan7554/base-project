@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { forceWidth } from '../redux/ducks/Page';
-import Login from '../components/Login.js';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { forceWidth } from '../redux/ducks/Page'
+import Login from '../components/Login/Login.js'
 
 function mapStateToProps(state) {
-    return { ...state.page };
+    return { ...state.page }
 }
 
 function mapDispatchToProps(dispatch) {
-    return {};
+    return {}
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Test2 extends Component {
     render() {
-        const {breakpoint} = this.props;
+        const {breakpoint} = this.props
         return (
             <div className={breakpoint}>
                 <Login />
@@ -23,4 +23,4 @@ class Test2 extends Component {
     }
 }
 
-export default Test2;
+export default Test2

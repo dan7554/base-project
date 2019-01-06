@@ -95,7 +95,7 @@ https://stackoverflow.com/questions/26566317/invariant-violation-registercompone
     </html>
     and in your code, call
 
-    React.render(<App />, document.getElementById('root'));
+    React.render(<App />, document.getElementById('root'))
     You should always render to a nested div instead of body. Otherwise all sorts of third-party code (Google Font Loader, browser plugins, whatever) can modify the body DOM node when React doesn't expect it, and cause weird errors that are very hard to trace and debug. Read more about this issue.
 
 
@@ -115,15 +115,15 @@ https://stackoverflow.com/questions/26566317/invariant-violation-registercompone
  
     class Bork {
         //Property initializer syntax
-        instanceProperty = "bork";
+        instanceProperty = "bork"
         boundFunction = () => {
-        return this.instanceProperty;
+        return this.instanceProperty
         }
 
         //Static class properties
-        static staticProperty = "babelIsCool";
+        static staticProperty = "babelIsCool"
         static staticFunction = function() {
-        return Bork.staticProperty;
+        return Bork.staticProperty
         }
     }
     .....

@@ -1,11 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const ConfigWebpackPlugin = require('config-webpack');
-const publicPath = '/dist/build/';
+const path = require('path')
+const webpack = require('webpack')
+const ConfigWebpackPlugin = require('config-webpack')
+const publicPath = '/dist/build/'
 
 module.exports = env => {
   console.log('Environment: ', env.NODE_ENV)
-  process.env.NODE_ENV = env.NODE_ENV;
+  process.env.NODE_ENV = env.NODE_ENV
 
   return {
     entry: './src/index.js',
@@ -43,6 +43,11 @@ module.exports = env => {
       }),
       new ConfigWebpackPlugin('Config')
     ],
+    resolve: {
+      alias: {
+        '@styles': path.join(__dirname, 'styles'),
+      },
+    },
     module: {
       rules: [
         {

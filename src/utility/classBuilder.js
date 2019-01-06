@@ -1,33 +1,33 @@
 export default function classBuilder( baseClass, classMaps ) {
-    let classes = '';
+    let classes = ''
     try {
         if (typeof classMaps === Object) {
             console.error('Bad classMap type', typeof classMaps)
             console.trace()
-            return '';
+            return ''
         }
         if (typeof baseClass === String) {
             console.error('Bad baseClass type', typeof baseClass)
             console.trace()
-            return '';
+            return ''
         }
-        classes = baseClass;
-        const classNames = Object.keys(classMaps);
+        classes = baseClass
+        const classNames = Object.keys(classMaps)
 
         for(let i = 0; i < classNames.length; i++) {
             let space = ''
-            let className = classNames[i];
-            let classMapCondition =  classMaps[className];
+            let className = classNames[i]
+            let classMapCondition =  classMaps[className]
 
             if (classes !== '') {
-                space = ' ';
+                space = ' '
             }
-            classes += classMapCondition ? (space + className) : '';
+            classes += classMapCondition ? (space + className) : ''
         }
     } catch (er) {
         console.error('Something went wrong when mapping classes', er)
-        return '';
+        return ''
     }
 
-    return classes;
+    return classes
 } 

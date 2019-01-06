@@ -1,11 +1,11 @@
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 
-import userReducer from './ducks/User';
-import pageReducer from './ducks/Page';
-import sideDrawerReducer from './ducks/SideDrawer';
+import userReducer from './ducks/User'
+import pageReducer from './ducks/Page'
+import sideDrawerReducer from './ducks/SideDrawer'
 
 const reducers = combineReducers({
   routing: routerReducer,
@@ -15,8 +15,8 @@ const reducers = combineReducers({
 })
 
 // Redux config
-const logger = createLogger();
-const middleware = applyMiddleware(logger, thunk);
-const store = createStore(reducers, middleware);
+const logger = createLogger()
+const middleware = applyMiddleware(logger, thunk)
+const store = createStore(reducers, middleware)
 
-export default store;
+export default store
